@@ -223,6 +223,93 @@
         request’.
       </p>
 
+      <h2 class="heading-large">Cookie banner</h2>
+      <h3 class="heading-medium">For all public-facing services on GOV.UK</h3>
+
+      <p>This cookie banner has been agreed with the DWP data policy team to represent their understanding of what we need to do to meet legal requirements.</p>
+    </div>
+  </div>
+
+  <!-- COOKIE BANNER EXAMPLE -->
+  <div class="example">
+    <div class="grid-row">
+
+      <div id="global-cookie-message" style="display:block;padding-left:10px">
+        <div class="outer-block">
+          <div class="inner-block">
+            <p>This service uses <a href="/cookiepolicy" target="_new">cookies</a> to make the site simpler. <a href="#" id="cookie_gotit">Got it</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- COOKIE BANNER EXAMPLE - end -->
+  
+  <!-- COOKIE BANNER SNIPPETS -->
+  <div class="grid-row">
+    <p>
+      <details>
+        <summary><span class="summary">View code snippet</span></summary>
+        <div class="panel panel-border-narrow">
+          <div class="tab-panel">
+            <div class="tab-panel-menu">
+              <a href="#" class="tab-link">HTML</a>
+              <a href="#" class="tab-link">JavaScript</a>
+            </div>
+
+            <div class="tab-panes">
+              <div class="tab-pane">
+                <pre class="language-markup">
+<code>&#x3C;div id=&#x22;global-cookie-message&#x22;&#x3E;
+  &#x3C;div class=&#x22;outer-block&#x22;&#x3E;
+    &#x3C;div class=&#x22;inner-block&#x22;&#x3E;
+      &#x3C;p&#x3E;This service uses &#x3C;a href=&#x22;/cookiepolicy&#x22; target=&#x22;_new&#x22;&#x3E;cookies&#x3C;/a&#x3E; to make the site simpler. &#x3C;a href=&#x22;#&#x22; id=&#x22;cookie_gotit&#x22;&#x3E;Got it&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code>
+                </pre>
+              </div><!-- .tab-pane -->
+              
+              <div class="tab-pane">
+                <pre class="language-js">
+<code>
+// The current GOVUK.cookie code displays the banner above and 
+// sets the cookie on every page view. In order to make this DWP 
+// style banner work you'll need to prevent the cookie being set 
+// on every page view and replace that with a click handler on
+// the "Got it" link.
+
+// Something like this:
+$('#cookie_gotit').on('click',function(e)
+{
+  e.preventDefault();
+  GOVUK.cookie('seen_cookie_message', 'yes', { days: 28 });
+  $('#global-cookie-message').hide();
+});
+</code>
+                </pre>
+              </div><!-- .tab-pane -->
+              
+              
+            </div>
+          </div>
+        </div>
+      </details>
+    </p>
+  </div>
+  <!-- COOKIE BANNER SNIPPETS - end -->
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <p>The <a href="#">cookies</a> link will link to the cookies page for your service.</p>
+      <p>When a user clicks the <a href="#">Got it</a> link a cookie will be set and the banner will disappear and not be shown from that point onwards.</p>
+    </div>
+  </div>
+
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
       <h2 class="heading-large">Footer</h2>
 
       <h3 class="heading-medium">Version 1 - for a public-facing service not on GOV.UK</h3>
