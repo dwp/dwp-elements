@@ -1,0 +1,32 @@
+{% extends "layout_dwp.html" %}
+
+{% set serviceName = 'Design Patterns' %}
+
+{% block page_title %}
+  DWP {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+  <main id="content" role="main">
+    <h1 class="heading-xlarge">Design Patterns at DWP</h1>
+    
+    <h2 class="heading-large">Elements</h2>
+    <p>Elements are the smallest building blocks of our page designs. The typography, font choices, colours, and layout. Is how we style individual user interface elements on the page. The large majority of the elements we use come directly from the <a href="http://govuk-elements.herokuapp.com/">GOV.UK elements</a> but there are a few which are perculiar to DWP.</p>
+    <p><a href="http://dwp-elements.herokuapp.com/">DWP Elements</a></p>
+    
+    <h2 class="heading-large">Pages / Components</h2>
+    <p>These are where we combine the Elements to create pages (or parts of pages) for a single purpose. This covers the way we ask certain questions and the way we allow users to perform certain in-page tasks. Following a one-thing-per-page principle means that quite often these are actually full page designs. Again we take the <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns">GOV.UK patterns</a> as a starting point and build upon them.</p>
+    <p><a href="http://dwp-patterns.herokuapp.com/">DWP Page/Component Design Patterns</a></p>
+    
+    <h2 class="heading-large">Interactions</h2>
+    <p>Here we combine page/components into a flow which create an interaction. This means any place where the user is taken through a a group of pages for a single purpose.</p>
+    <p><a href="https://ixd-patterns.herokuapp.com/">DWP Interaction Design Patterns</a></p>
+    
+    <h2 class="heading-large">Services</h2>
+    <p>This is where we caputure service patterns that could be used by different services we achieve the same outcomes. This covers things like what happens after a application is submitted, or how assisted digital help is offers to the users of a service.</p>
+    <p><a href="servicePatterns">DWP Service Design Patterns</a> (this doesn't exist yet)</p>
+    
+  </main>
+
+{% endblock %}
