@@ -263,7 +263,7 @@
 <code>&#x3C;div id=&#x22;global-cookie-message&#x22;&#x3E;
   &#x3C;div class=&#x22;outer-block&#x22;&#x3E;
     &#x3C;div class=&#x22;inner-block&#x22;&#x3E;
-      &#x3C;p&#x3E;This service uses &#x3C;a href=&#x22;/cookiepolicy&#x22; target=&#x22;_new&#x22;&#x3E;cookies&#x3C;/a&#x3E; to make the site simpler. &#x3C;a href=&#x22;#&#x22; id=&#x22;cookie_gotit&#x22;&#x3E;That&rsquo;s fine&#x3C;/a&#x3E;.&#x3C;/p&#x3E;
+      &#x3C;p&#x3E;This service uses &#x3C;a href=&#x22;/cookiepolicy&#x22; target=&#x22;_new&#x22;&#x3E;cookies&#x3C;/a&#x3E; to make the site simpler. &#x3C;a href=&#x22;#&#x22; id=&#x22;cookie_confirm&#x22;&#x3E;That&rsquo;s fine&#x3C;/a&#x3E;.&#x3C;/p&#x3E;
     &#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code>
@@ -277,10 +277,10 @@
 // sets the cookie on every page view. In order to make this DWP 
 // style banner work you'll need to prevent the cookie being set 
 // on every page view and replace that with a click handler on
-// the "I agree" link.
+// the "That’s fine" link.
 
 // Something like this:
-$('#cookie_gotit').on('click',function(e)
+$('#cookie_confirm').on('click',function(e)
 {
   e.preventDefault();
   GOVUK.cookie('seen_cookie_message', 'yes', { days: 28 });
