@@ -33,7 +33,7 @@
     "lodash": "^4.6.1",
     "minimist": "0.0.8",
     "portscanner": "^1.0.0",
-    "prompt": "^0.2.14",
+    "prompt": "^1.2.0",
     "readdir": "0.0.6",
     "serve-favicon": "2.3.0"
   }
